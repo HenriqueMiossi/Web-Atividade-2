@@ -27,38 +27,3 @@ h1 {
 h2 {
     font-size: 30px;
 }
-
-
-#conteudoTendencies {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#tendenciasID {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 20px;
-}
-
-#tituloFilme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 1%;
-    color: white;
-}
-
-#textoTendencias {
-    width: 500px;
-    font-weight: bold;
-    color: white;
-    padding-left: 60px;
-}
