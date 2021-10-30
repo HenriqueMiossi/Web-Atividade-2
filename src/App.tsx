@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Reviewer from './components/Reviewer';
+import Reviewer from './routes/Reviewer';
 
 function App() {
   return (

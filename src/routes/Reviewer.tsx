@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 
-import Tendencies from './routes/Tendencies/Tendencies';
-import Movies from './routes/Movies/Movies';
+import Tendencies from './Tendencies/Tendencies';
+import Movies from './Movies/Movies';
 
 function Reviewer() {
     return (
