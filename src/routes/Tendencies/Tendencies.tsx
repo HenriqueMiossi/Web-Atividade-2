@@ -1,13 +1,16 @@
 import React from 'react';
+
 import './Tendencies.css';
+
+import MovieTendencyComponent from '../components/MovieTendencyComponent/MovieTendencyComponent';
+import TitleComponent from '../components/TitleComponent/TitleComponent';
 
 function Tendencies() {
     return (
         <div id="paginaTendencies">
-            <header>
-            <h1>Tendências</h1>
-            </header>
-            <body id="conteudoTendencies">
+            <TitleComponent title="Tendências"/>
+
+            <div id="conteudoTendencies">
                 <div id="tendenciasID">
                     <p id="tituloFilme">
                         <img src="https://s.aficionados.com.br/imagens/img-20210629-201036_cke.jpg" alt="" />
@@ -26,7 +29,7 @@ function Tendencies() {
                         In porta tempus ante ut vehicula. Nullam nec lorem mauris. Praesent sed gravida libero. Morbi id mollis dolor.
                         Nunc condimentum accumsan sem, rutrum hendrerit turpis dapibus sodales.</p>
                 </div>
-            </body>
+            </div>
         </div>
     );
 }
