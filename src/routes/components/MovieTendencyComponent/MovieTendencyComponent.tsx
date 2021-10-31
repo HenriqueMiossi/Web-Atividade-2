@@ -8,6 +8,7 @@ function MovieTendencyComponent() {
                 <img 
                     src="https://s.aficionados.com.br/imagens/img-20210629-201036_cke.jpg" 
                     className="image"
+                    alt=""
                 />
                 <h2 className="movieTitle">Bad Fallen melhor IGL</h2>
             </div>
