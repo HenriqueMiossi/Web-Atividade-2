@@ -4,10 +4,12 @@ import './Tendencies.css';
 
 import MovieTendencyComponent from '../components/MovieTendencyComponent/MovieTendencyComponent';
 import TitleComponent from '../components/TitleComponent/TitleComponent';
+import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 
 function Tendencies() {
     return (
-        <div id="paginaTendencies">
+        <div className="background">
+            <HeaderComponent />
             <TitleComponent title="Tendências"/>
 
             <div>

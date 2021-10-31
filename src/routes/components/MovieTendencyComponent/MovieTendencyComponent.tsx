@@ -5,7 +5,10 @@ function MovieTendencyComponent() {
     return (
         <div className="tendencyItem">
             <div className="movieContainer">
-                <img src="https://s.aficionados.com.br/imagens/img-20210629-201036_cke.jpg" alt="" />
+                <img 
+                    src="https://s.aficionados.com.br/imagens/img-20210629-201036_cke.jpg" 
+                    className="image"
+                />
                 <h2 className="movieTitle">Bad Fallen melhor IGL</h2>
             </div>
             <p className="movieDescription">

@@ -4,8 +4,8 @@ import './TitleComponent.css';
 function TitleComponent(props: { title: string }) {
     return (
         <div>
-            <header>
-                <h1>{ props.title }</h1>
+            <header className="titleContainer">
+                <h1 className="title">{ props.title }</h1>
             </header>
         </div>
     );
