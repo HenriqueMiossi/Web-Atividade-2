@@ -9,7 +9,6 @@ function HeaderComponent() {
 
     let matchTendencies = useRouteMatch('/');
     let matchMovies = useRouteMatch('/movies');
-    let matchLogin = useRouteMatch('/login');
     
     return (
         <div className="headerContainer">
@@ -25,9 +24,6 @@ function HeaderComponent() {
                 </button>
                 <button className={`${matchMovies?.isExact ? "button-selected" : "button"} button-center`} onClick={() => { history.push('/movies') }}>
                     Filmes
-                </button>
-                <button className={`${matchLogin?.isExact ? "button-selected" : "button"} button-right`} onClick={() => { history.push('/movies') }}>
-                    Login
                 </button>
             </div>
         </div>

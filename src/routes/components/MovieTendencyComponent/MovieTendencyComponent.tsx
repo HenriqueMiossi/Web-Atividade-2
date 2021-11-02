@@ -3,7 +3,7 @@ import './MovieTendencyComponent.css';
 
 function MovieTendencyComponent() {
     return (
-        <div className="tendencyItem">
+        <div className="tendencyItem" onClick={() => console.log("Clicou")}>
             <div className="movieContainer">
                 <img 
                     src="https://s.aficionados.com.br/imagens/img-20210629-201036_cke.jpg" 
