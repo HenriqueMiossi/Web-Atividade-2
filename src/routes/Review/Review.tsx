@@ -5,6 +5,7 @@ import './Review.css';
 
 import TitleComponent from '../components/TitleComponent/TitleComponent';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
+import NewReviewComponent from '../components/NewReviewComponent/NewReviewComponent';
 
 function Review() {
     const movieId = useParams<{ id : string }>().id.substring(1);
@@ -12,9 +13,9 @@ function Review() {
     return (
         <div className="background">
             <HeaderComponent />
-            <TitleComponent title="Reviews"/>
+            <TitleComponent title={ `Reviews - ${ movieId }` }/>
 
-            <h1>{ movieId }</h1>
+            <NewReviewComponent movieId={movieId}/>
         </div>
     );
 }

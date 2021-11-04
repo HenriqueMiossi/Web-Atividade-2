@@ -25,7 +25,7 @@ function Movies() {
                     movies.map(movie =>
                         <li key={movie.valueOf()} onClick={() => history.push(`/review:${movie.valueOf()}`)}>
                             <MovieComponent />
-                        </li>    
+                        </li>
                     )
                 }
             </ul>
