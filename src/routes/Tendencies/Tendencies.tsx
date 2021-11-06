@@ -10,7 +10,7 @@ function Tendencies() {
     const [movies, setMovies] = useState<string[]>([]);
     
     useEffect(() => {
-        setMovies(['a']);
+        setMovies(['a', 'b']);
     }, []);
 
     return (

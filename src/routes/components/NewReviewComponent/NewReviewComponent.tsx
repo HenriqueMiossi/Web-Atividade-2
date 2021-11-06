@@ -9,6 +9,7 @@ function NewReviewComponent(props: {movieId: string}) {
         <>
             <div className="reviewContainer">
                 <textarea
+                    placeholder="Digite aqui..."
                     className="textInput"
                     onChange={reviewText => setText(reviewText.target.value)}
                 ></textarea>
