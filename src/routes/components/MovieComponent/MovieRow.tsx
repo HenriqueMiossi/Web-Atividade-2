@@ -11,7 +11,7 @@ function MovieRow(props: { title: string, items: any }) {
     const history = useHistory();
 
     const handleLeftArrow = () => {
-        let x = scrollX + 150;
+        let x = scrollX + Math.round(window.innerWidth / 2);
         if(x > 0) {
             x = 0;
         }
@@ -19,7 +19,12 @@ function MovieRow(props: { title: string, items: any }) {
     }
 
     const handleRightArrow = () => {
-
+        let x = scrollX - Math.round(window.innerWidth / 2);
+        let listW = props.items.results.length * 150;
+        if((window.innerWidth - listW) > x) {
+            x =(window.innerWidth - listW) - 60;
+        }
+        setScrollX(x);
     }
 
     return (
