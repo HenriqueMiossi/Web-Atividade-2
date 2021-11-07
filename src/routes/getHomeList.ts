@@ -40,6 +40,7 @@ export async function getHomeList() {
             title: 'Terror',
             items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
         },
+        
 
     ];
 }

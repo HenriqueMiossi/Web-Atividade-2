@@ -12,11 +12,12 @@ function HeaderComponent() {
     
     return (
         <div className="headerContainer">
-            <img 
+            <a href="http://localhost:3000/"><img 
+                
                 src={logo}
                 alt=""
                 className="logo"
-            />
+            /></a>
 
             <div className="buttonContainer">
                 <button className={`${matchTendencies?.isExact ? "button-selected" : "button"} button-left`} onClick={() => { history.push('/') }}>
