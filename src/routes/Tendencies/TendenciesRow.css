@@ -5,8 +5,9 @@
 
 
 .tendenciesRow h2 {
-    margin: 120px 0px 0px 30px;
+    margin: 80px 0px 0px 30px;
     color: white;
+    
 
 }
 
@@ -66,4 +67,5 @@
 
 .tendenciesRow--list {
     transition: all ease 0.5s;
+    margin-left: 20px;
 }

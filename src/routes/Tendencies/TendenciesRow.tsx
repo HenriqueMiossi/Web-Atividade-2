@@ -30,21 +30,11 @@ function TendenciesRow(props: { title: string, items: any }) {
     return (
         <div className="tendenciesRow">
             <h2>{props.title}</h2>
-           
-            <div className="tendenciesRow--left" onClick={handleLeftArrow}>
-                <NavigateBeforeIcon style={{fontSize: 50}}/>
-            </div>
-           
-            
-            <div className="tendenciesRow--right" onClick={handleRightArrow}>
-                <NavigateNextIcon style={{fontSize: 50}}/>
-            </div>
 
             
             <div className="tendenciesRow--listarea">
                 <div className="tendenciesRow--list" style={{
-                    marginLeft: scrollX,    
-                    width: props.items.results.length * 150
+
                 }}>
                     {props.items.results.length > 0 && props.items.results.map((item: any, key: number) =>(
                         <div key={key} className="tendenciesRow--item" onClick={() => history.push(`/review:${item.id}`)}>
