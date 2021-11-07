@@ -7,7 +7,11 @@ const basicFetch = async (endpoint: string) => {
     return json;
 }
 
-async function getHomeList() {
+interface Movie {
+    original_title: string,
+}
+
+export async function getHomeList() {
 
     return[
         
@@ -40,4 +44,6 @@ async function getHomeList() {
     ];
 }
 
-export default getHomeList;
+export async function getMovieName(id: string): Promise<Movie> {
+    return await basicFetch(`/movie/${id}?language=pt-BR&api_key=${API_KEY}`);
+}

@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import './MovieRow.css';
+import { useHistory } from 'react-router-dom';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
+import './MovieRow.css';
+
 function MovieRow(props: { title: string, items: any }) {
     const [scrollX, setScrollX] = useState(-400);
-    
+
+    const history = useHistory();
+
     const handleLeftArrow = () => {
         let x = scrollX + 150;
         if(x > 0) {
@@ -38,7 +42,7 @@ function MovieRow(props: { title: string, items: any }) {
                     width: props.items.results.length * 150
                 }}>
                     {props.items.results.length > 0 && props.items.results.map((item: any, key: number) =>(
-                        <div key={key} className="movieRow--item">
+                        <div key={key} className="movieRow--item" onClick={() => history.push(`/review:${item.id}`)}>
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
                         </div>
                     ))}

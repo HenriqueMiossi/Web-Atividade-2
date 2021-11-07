@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import './Movies.css';
-import getHomeList from '../getHomeList';
+import { getHomeList } from '../getHomeList';
 
 import TitleComponent from '../components/TitleComponent/TitleComponent';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
@@ -16,7 +15,6 @@ interface movie {
 
 function Movies() {
     const [movieList, setMovieList] = useState<movie[]>([]);
-    const history = useHistory();
 
     useEffect(()=> {
         const loadAll = async () => {
@@ -34,7 +32,7 @@ function Movies() {
 
             <section className="lists">
               {movieList.map((item, key) =>( 
-               <MovieRow key={key} title={item.title} items={item.items}/>
+               <MovieRow key={key} title={item.title} items={item.items} />
               ))}
             </section>
 
