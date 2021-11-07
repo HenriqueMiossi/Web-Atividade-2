@@ -7,8 +7,18 @@ const basicFetch = async (endpoint: string) => {
     return json;
 }
 
+const backendFetch = async (movieId: string) => {
+    const req = await fetch(`http://localhost:3333/movies/${movieId}`);
+    const json = await req.json();
+    return json;
+}
+
 interface Movie {
     original_title: string,
+}
+
+interface Review {
+    reviews: string[],
 }
 
 export async function getHomeList() {
@@ -47,4 +57,8 @@ export async function getHomeList() {
 
 export async function getMovieName(id: string): Promise<Movie> {
     return await basicFetch(`/movie/${id}?language=pt-BR&api_key=${API_KEY}`);
+}
+
+export async function getMovieReview(id: string): Promise<Review> {
+    return await backendFetch(id);
 }

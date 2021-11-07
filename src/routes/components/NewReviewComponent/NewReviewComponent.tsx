@@ -17,7 +17,13 @@ function NewReviewComponent(props: {movieId: string}) {
             </div>
             <button className="sendButton" onClick={() => {
                 const data = {"review": text, "movieId": props.movieId};
-                axios.post(`http://localhost:3333/movies/${props.movieId}`, data);
+                if (text != "") {
+                    axios.post(`http://localhost:3333/movies/${props.movieId}`, data);
+                    alert('Review enviada com sucesso!');
+                }
+                else {
+                    alert('A review não pode estar em branco, tente novamente...');
+                }
             }}>
                 Enviar Review
             </button>
